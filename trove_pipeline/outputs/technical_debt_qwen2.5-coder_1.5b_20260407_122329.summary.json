@@ -1,0 +1,12 @@
+{
+  "accuracy": 0.4267,
+  "f1_macro": 0.3879,
+  "f1_god_class": 0.0976,
+  "f1_long_method": 0.4444,
+  "f1_data_class": 0.7273,
+  "f1_feature_envy": 0.2824,
+  "f1_none": 0.0,
+  "total_predictions": 150,
+  "correct": 64,
+  "emissions_kgCO2": 0.0012184754211587035
+}
