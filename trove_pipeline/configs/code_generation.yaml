@@ -1,0 +1,36 @@
+# ═══════════════════════════════════════════════════════════════
+#  TROVE Pipeline — Configuration for Code Generation
+#  Task: Evaluate code generation quality
+#  Examples: HumanEval, MBPP, custom coding benchmarks
+# ═══════════════════════════════════════════════════════════════
+
+model_name: "qwen2.5-coder:7b"
+task_name: "code_generation"
+
+# Dataset (JSONL — columns: prompt, canonical_solution, language)
+dataset_path: "datasets/humaneval.jsonl"
+dataset_format: "jsonl"
+sample_size: 100
+seed: 42
+
+# Prompts
+prompts_dir: "prompts/code_generation"
+prompt_sections: []
+
+# Combinations
+combo_mode: "random"
+n_combos: 5
+min_sections: 1
+
+# Inference — more tokens needed for code generation
+temperature: 0.2
+max_tokens: 512
+request_timeout: 300
+
+# Output
+output_dir: "outputs"
+output_file: ""
+
+# Carbon tracking
+track_emissions: true
+carbon_output_dir: "carbon_reports"

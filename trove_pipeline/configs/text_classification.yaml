@@ -1,0 +1,36 @@
+# ═══════════════════════════════════════════════════════════════
+#  TROVE Pipeline — Configuration for Text Classification
+#  Task: Multi-class / binary text classification
+#  Examples: sentiment analysis, spam detection, topic labeling
+# ═══════════════════════════════════════════════════════════════
+
+model_name: "llama3.2:3b"
+task_name: "text_classification"
+
+# Dataset (CSV example — columns auto-detected: text, label)
+dataset_path: "datasets/sentiment_test.csv"
+dataset_format: "csv"
+sample_size: 300
+seed: 42
+
+# Prompts
+prompts_dir: "prompts/text_classification"
+prompt_sections: []
+
+# Combinations
+combo_mode: "random"
+n_combos: 8
+min_sections: 2
+
+# Inference
+temperature: 0.0
+max_tokens: 32
+request_timeout: 120
+
+# Output
+output_dir: "outputs"
+output_file: ""
+
+# Carbon tracking
+track_emissions: true
+carbon_output_dir: "carbon_reports"

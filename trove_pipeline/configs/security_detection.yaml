@@ -1,0 +1,37 @@
+# ═══════════════════════════════════════════════════════════════
+#  TROVE Pipeline — Configuration for Security/Vulnerability Detection
+#  Task: Binary classification (0=safe, 1=vulnerable)
+#  Dataset: PrimeVul JSONL
+# ═══════════════════════════════════════════════════════════════
+
+model_name: "qwen2.5-coder:0.5b"
+task_name: "security_detection"
+
+# Dataset
+dataset_path: "datasets/primevul_test.jsonl"
+dataset_format: "jsonl"
+sample_size: 500           # 0 = use full dataset
+seed: 42
+
+# Prompts
+prompts_dir: "prompts/security_detection"
+prompt_sections: []        # empty = use all CSVs in prompts_dir
+                           # e.g. ["T", "R", "O"] to use only those sections
+
+# Combinations
+combo_mode: "random"       # random | exhaustive
+n_combos: 10
+min_sections: 2
+
+# Inference
+temperature: 0.0
+max_tokens: 16
+request_timeout: 120
+
+# Output
+output_dir: "outputs"
+output_file: ""            # auto-generated timestamp name if empty
+
+# Carbon tracking
+track_emissions: true
+carbon_output_dir: "carbon_reports"

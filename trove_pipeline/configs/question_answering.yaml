@@ -1,0 +1,36 @@
+# ═══════════════════════════════════════════════════════════════
+#  TROVE Pipeline — Configuration for Question Answering
+#  Task: Open/closed domain QA — EM + Token F1 metrics
+#  Examples: SQuAD, TriviaQA, custom QA datasets
+# ═══════════════════════════════════════════════════════════════
+
+model_name: "llama3.2:3b"
+task_name: "question_answering"
+
+# Dataset (JSONL — columns: question, answer, context [optional])
+dataset_path: "datasets/squad_sample.jsonl"
+dataset_format: "jsonl"
+sample_size: 200
+seed: 42
+
+# Prompts
+prompts_dir: "prompts/question_answering"
+prompt_sections: []
+
+# Combinations
+combo_mode: "random"
+n_combos: 8
+min_sections: 2
+
+# Inference
+temperature: 0.0
+max_tokens: 64
+request_timeout: 120
+
+# Output
+output_dir: "outputs"
+output_file: ""
+
+# Carbon tracking
+track_emissions: true
+carbon_output_dir: "carbon_reports"
