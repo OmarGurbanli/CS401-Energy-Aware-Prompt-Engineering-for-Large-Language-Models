@@ -1,0 +1,2966 @@
+model,task,prompt_combo,prompt_text,raw_response,prediction,latency_sec,true_label,correct,true_positive,false_positive,true_negative,false_negative,gt_label,summary_accuracy,summary_precision,summary_recall,summary_f1_score,summary_fpr,summary_fnr,summary_true_positives,summary_false_positives,summary_true_negatives,summary_false_negatives,summary_total_predictions,summary_emissions_kgCO2
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",4,0,13.5705,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",0,0,10.7617,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static st_plugin_dl *plugin_dl_insert_or_reuse(struct st_plugin_dl *plugin_dl)
+{
+  uint i;
+  str...",0,0,6.1062,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,5.8752,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,7.3062,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static RList *oneshotall_buffer(RBin *bin, RBuffer *b) {
+	RList *list = r_list_newf (free);
+	RBi...",1,1,3.4981,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,10.7738,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,13.6537,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+bool Tensor::FromProto(Allocator* a, const TensorProto& proto) {
+  CHECK_NOTNULL(a);
+  TensorBuf...",1,1,8.5403,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,27.7934,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,31.4661,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+read_bitmap_file_data (FILE    *fstream,
+		       guint   *width, 
+		       guint   *height,
+		 ...",1,1,24.2422,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,10.8063,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,12.8993,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+process_button(struct parsed_tag *tag)
+{
+    Str tmp = NULL;
+    char *p, *q, *r, *qq = """";
+    ...",1,1,8.7602,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",4,0,6.3862,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,8.4549,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+uECC_VLI_API void uECC_vli_nativeToBytes(uint8_t *bytes,
+                                       ...",1,1,4.574,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,12.809,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,14.714,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+lsquic_qeh_settings (struct qpack_enc_hdl *qeh, unsigned max_table_size,
+             unsigned d...",1,1,9.902,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,9.4813,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,11.3857,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+int hfsplus_find_cat(struct super_block *sb, u32 cnid,
+		     struct hfs_find_data *fd)
+{
+	hfspl...",1,1,5.4591,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,26.2609,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,29.0546,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+void updateHandshakeState(QuicServerConnectionState& conn) {
+  // Zero RTT read cipher is availa...",1,1,24.0868,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,101.9052,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,108.4325,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+mp_sint32 LoaderS3M::load(XMFileBase& f, XModule* module)
+{	
+	module->cleanUp();
+
+	// this will ...",1,1,110.2682,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,7.7667,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,7.9878,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+void cpu_watchpoint_remove_all(CPUState *cpu, int mask)
+{
+#if 0
+    CPUWatchpoint *wp, *next;
+
+ ...",1,1,3.9289,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,29.0357,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,30.2939,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static pj_xml_node *xml_parse_node( pj_pool_t *pool, pj_scanner *scanner)
+{
+    pj_xml_node *nod...",1,1,24.9195,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,6.9411,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,9.675,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static int adts_init(AVFormatContext *s)
+{
+    ADTSContext *adts = s->priv_data;
+    AVCodecPara...",1,1,4.7173,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,84.0336,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,93.2504,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+do_buffer_ext(
+    int		action,
+    int		start,
+    int		dir,		// FORWARD or BACKWARD
+    int		c...",1,1,79.2948,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,48.0463,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,53.1631,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+lexer_expect_object_literal_id (parser_context_t *context_p, /**< context */
+                   ...",1,1,45.4718,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,7.4617,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,10.7407,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+string Print(const OpDef::ArgDef& arg) {
+  string out;
+  strings::StrAppend(&out, arg.name(), "":...",1,1,5.2387,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",2,0,10.5446,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,13.518,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+net_evhttp_bind(struct evhttp *evhttp, short unsigned port, const char *log_service_name)
+{
+  co...",1,1,9.3462,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,11.338,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,13.5205,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+  void Compute(OpKernelContext* ctx) override {
+    auto x = ctx->input(0);
+    auto i = ctx->in...",1,1,9.4826,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,13.2167,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,14.7767,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+setup_call_node_call(CallNode* cn, ScanEnv* env, int state)
+{
+  MemEnv* mem_env = SCANENV_MEMENV...",1,1,10.9102,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,13.4825,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,16.4511,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+
+GF_Err segr_box_read(GF_Box *s, GF_BitStream *bs)
+{
+	u32 i, k;
+	FDSessionGroupBox *ptr = (FDSes...",1,1,12.0335,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,4.7939,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,6.9149,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+  With_sum_func_cache(const Item *a, const Item *b)
+   :m_with_sum_func(a->with_sum_func() || b-...",0,0,2.9531,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,5.5603,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,8.6465,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static int ssl_transform_aead_dynamic_iv_is_explicit(
+                                mbedtls_ss...",0,0,2.8682,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,10.6585,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,13.9571,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+edit_deep_directories(struct archive_write_disk *a)
+{
+	int ret;
+	char *tail = a->name;
+
+	/* If p...",1,1,11.1834,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,15.3652,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,19.1109,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+PJ_DEF(pj_status_t) pjmedia_rtcp_fb_build_nack(
+					pjmedia_rtcp_session *session,
+					void *b...",1,1,12.9902,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,8.2891,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,11.0345,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static void addreply_newline(const char * const str, const size_t size)
+{
+    struct reply *newl...",1,1,7.2466,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,9.8554,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,10.5195,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static void sungem_send_packet(SunGEMState *s, const uint8_t *buf,
+                             ...",1,1,4.1402,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,6.3355,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,8.8546,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+DEFUN (exit_address_family,
+       exit_address_family_cmd,
+       ""exit-address-family"",
+      ...",1,1,4.6106,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,12.9807,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,16.3506,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+StatusOr<FullTypeDef> SpecializeType(const AttrSlice& attrs,
+                                   ...",1,1,11.6563,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,14.3533,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,17.4328,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+int remap_pfn_range(struct vm_area_struct *vma, unsigned long addr,
+		    unsigned long pfn, uns...",1,1,12.7157,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",4,0,7.4663,1,0,0,0,0,1,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,9.9851,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static char *clean_path(char *path)
+{
+	char *ch;
+	char *ch2;
+	char *str;
+	str = xmalloc(strlen(p...",1,1,5.5397,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",4,0,16.1507,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,19.7523,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static int remove_dup_with_compare(THD *thd, TABLE *table, Field **first_field,
+				   Item *hav...",1,1,14.0382,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,8.4764,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,11.169,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+njs_array_convert_to_slow_array(njs_vm_t *vm, njs_array_t *array)
+{
+    uint32_t           i, le...",1,1,6.4325,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,6.7901,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,10.6671,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+PJ_DEF(pjmedia_sdp_attr*) pjmedia_sdp_attr_clone(pj_pool_t *pool, 
+						 const pjmedia_sdp_attr...",1,1,4.859,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,6.5762,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,9.537,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+dirserv_get_name_status(const char *id_digest, const char *nickname)
+{
+  char fp[HEX_DIGEST_LEN+...",1,1,4.629,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,9.4508,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,12.5282,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+IRC_PROTOCOL_CALLBACK(322)
+{
+    char *pos_topic;
+
+    IRC_PROTOCOL_MIN_ARGS(5);
+
+    pos_topic ...",1,1,7.6647,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",4,0,26.4286,1,0,0,0,0,1,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",0,0,31.2473,1,0,0,0,0,1,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+GF_AV1Config *gf_odf_av1_cfg_read_bs_size(GF_BitStream *bs, u32 size)
+{
+#ifndef GPAC_DISABLE_AV_...",0,0,25.0374,1,0,0,0,0,1,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,11.6026,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,13.9963,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+bool DependencyOptimizer::SafeToRemoveIdentity(const NodeDef& node) const {
+  if (!IsIdentity(no...",1,1,8.0522,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,36.2197,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,39.7205,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+GF_Err gf_isom_get_sample_for_movie_time(GF_ISOFile *the_file, u32 trackNumber, u64 movieTime, u...",0,0,33.4826,1,0,0,0,0,1,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,52.1583,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,57.6839,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+apply_extra_data (FlatpakDir   *self,
+                  GFile        *checkoutdir,
+             ...",1,1,48.5112,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,7.3807,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,9.388,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+  void Compute(OpKernelContext* ctx) override {
+    Buffer* buf = nullptr;
+    OP_REQUIRES_OK(ct...",1,1,4.9583,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,15.9656,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,16.6877,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+    kssl_keytab_is_available(KSSL_CTX *kssl_ctx)
+{
+    krb5_context		krb5context = NULL;
+    krb...",1,1,13.1393,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,4.659,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,6.7033,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+main(void)
+{
+    printf(""This program requires the wide-ncurses library\n"");
+    ExitProgram(EXI...",1,1,3.0225,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,6.0452,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,8.6825,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+std::unique_ptr<cql_server::response> cql_server::connection::make_error(int16_t stream, excepti...",1,1,4.2314,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,26.1974,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,30.9064,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static int io_read(struct io_kiocb *req, unsigned int issue_flags)
+{
+	struct iovec inline_vecs[U...",1,1,26.1957,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",4,0,7.237,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",0,0,9.742,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+uECC_VLI_API void uECC_vli_modAdd(uECC_word_t *result,
+                                  const u...",0,0,5.3544,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,10.6277,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,13.5528,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+static std::string getComment(const std::string &fulltext, int line)
+{
+	if (line < 1) return """";...",1,1,8.6761,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",The provided code snippet appears to be a part of a regular expression engine that processes,0,159.3085,1,0,0,0,0,1,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",The provided code snippet appears to be a part of a regular expression engine that processes,0,159.6512,1,0,0,0,0,1,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+regmatch(
+    char_u	*scan,		    // Current node.
+    proftime_T	*tm UNUSED,	    // timeout limi...",The provided code snippet appears to be a part of a regular expression engine that processes,0,154.5022,1,0,0,0,0,1,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,18.9497,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,19.5888,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+DocumentSource::GetNextResult DocumentSourceUnionWith::doGetNext() {
+    if (!_pipeline) {
+     ...",1,1,15.6389,1,1,1,0,0,0,1,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",4,0,11.2204,0,1,0,0,1,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,13.4121,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+usage(void)
+{
+#define DATA(s) s ""\n""
+    static const char msg[] =
+    {
+	DATA(""Usage: tabs [opt...",1,1,9.086,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E1|R=R1,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}
+Output:
+1
+
+***Internal planning steps (DO NOT output)***
+1. Parse the function signature a...",1,1,4.5456,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,E=E3|R=R0|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (C/C++ code):
+/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}
+Output:
+1
+
+Example 2:
+Input (C/C++ code):
+/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc...",1,1,7.6124,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
+qwen2.5-coder:0.5b,security_detection,O=O4|V=V4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid.
+
+***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit.
+
+
+Input (C/C++ code):
+  QuotaManager* manager() const {
+    return static_cast<QuotaManager*>(observer());
+  }
+",1,1,3.0471,0,0,0,1,0,0,0,0.5267,0.5154,0.8933,0.6537,0.84,0.1067,67,63,12,8,150,0.01562097223616792
