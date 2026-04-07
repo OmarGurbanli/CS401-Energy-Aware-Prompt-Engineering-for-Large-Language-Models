@@ -31,7 +31,7 @@ class TechnicalDebtTask(BaseTaskModule):
     # ── Dataset Loading ───────────────────────────────────────────
 
     def load_dataset(self, path: str, fmt: str) -> list[dict]:
-        df = pd.read_csv(path)
+        df = pd.read_csv(path, sep=';', quotechar='"')
 
         # Auto-detect code and label columns
         code_col  = self._find_column(df.columns, ["code_snippet", "code", "snippet", "source"])
