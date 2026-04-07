@@ -12,6 +12,7 @@
 ---
 
 ## Project Overview
+N.B: PrimeVul data set to be gotten from: https://drive.google.com/drive/folders/19iLaNDS0z99N8kB_jBRTmDLehwZBolMY
 
 This project focuses on **Energy-Aware Prompt Engineering for Large Language Models (LLMs)**, addressing the growing concern of **high energy consumption** and the **environmental impact** caused by computationally expensive LLM inference.
 
