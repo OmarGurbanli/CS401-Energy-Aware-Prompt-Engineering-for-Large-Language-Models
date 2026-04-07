@@ -1,0 +1,11 @@
+key,text
+O0,"***Output instructions:***
+- Output exactly one label word (e.g. positive, negative, neutral).
+- Do not include punctuation, explanations, or extra words."
+O1,"***Output instructions:***
+- Respond with a single word: the class label.
+- Valid labels depend on the dataset (e.g. positive / negative / neutral).
+- Any additional text will cause a parse error."
+O2,"***Output format:***
+Your entire response must be one label token.
+No explanation. No punctuation. Just the label."

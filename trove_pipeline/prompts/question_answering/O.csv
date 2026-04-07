@@ -1,0 +1,9 @@
+key,text
+O0,"***Output instructions:***
+- Output the answer as a short phrase or single word.
+- Do not repeat the question. Do not explain."
+O1,"***Output instructions:***
+- Provide the answer only — no preamble like 'The answer is'.
+- Keep it as brief as possible while remaining correct."
+O2,"***Output format:***
+Answer with the minimal correct phrase. One sentence maximum. No filler words."

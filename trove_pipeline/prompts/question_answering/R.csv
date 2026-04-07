@@ -1,0 +1,16 @@
+key,text
+R0,"***Internal planning steps (DO NOT output)***
+1. Read the question and identify what type of answer is expected (name, date, number, phrase).
+2. Scan the context (if provided) for the relevant span.
+3. Extract the minimal answer — do not include surrounding sentences.
+4. Output only the answer."
+R1,"***Internal planning steps (DO NOT output)***
+1. Understand the question's intent (who, what, when, where, why, how).
+2. Locate the most relevant part of the context.
+3. Formulate the shortest complete answer.
+4. Output the answer only."
+R2,"***Internal planning steps (DO NOT output)***
+1. Identify key entities in the question.
+2. Match them to information in the context or your knowledge.
+3. State the answer in the fewest words necessary.
+4. Do not include the question in your answer."

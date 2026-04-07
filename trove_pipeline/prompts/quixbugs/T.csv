@@ -1,0 +1,4 @@
+key,text
+T0,"You are a software engineer specializing in bug detection. Analyze the given Python function and determine whether it contains a bug."
+T1,"You are a code reviewer. Examine the provided Python program and classify it as correct or buggy."
+T2,"You are an automated bug detector. Given a Python function, decide if it is correct (1) or contains a bug (0)."

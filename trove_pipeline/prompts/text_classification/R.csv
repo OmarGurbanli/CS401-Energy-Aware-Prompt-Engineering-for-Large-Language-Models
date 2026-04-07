@@ -1,0 +1,16 @@
+key,text
+R0,"***Internal planning steps (DO NOT output)***
+1. Read the text carefully and note its overall tone and subject.
+2. Identify key words, phrases, or signals that indicate a class.
+3. Select the single most fitting label.
+4. Output only that label."
+R1,"***Internal planning steps (DO NOT output)***
+1. Identify the domain and intent of the text.
+2. Look for emotional, topical, or stylistic markers that match a class.
+3. Resolve any ambiguity by choosing the dominant signal.
+4. Output the label only."
+R2,"***Internal planning steps (DO NOT output)***
+1. Parse the sentence structure to understand the writer's intent.
+2. Cross-reference with known class definitions.
+3. Choose the label that best fits without over-reading.
+4. Return only the label string."

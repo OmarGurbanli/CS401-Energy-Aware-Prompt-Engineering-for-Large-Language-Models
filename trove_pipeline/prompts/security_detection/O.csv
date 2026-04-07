@@ -1,0 +1,22 @@
+key,text
+O0,"***Output instructions:***
+- Output exactly one digit: 0 (non-vulnerable) or 1 (vulnerable).
+- Example valid outputs: 0 or 1."
+O1,"***Output instructions:***
+- Respond with a single character: 0 or 1.
+- 0 means the function contains NO security vulnerability.
+- 1 means the function DOES contain a security vulnerability.
+- Do not write anything else."
+O2,"***Output instructions:***
+- Classification labels:
+    0 = Non-vulnerable: the function does not contain a security flaw.
+    1 = Vulnerable: the function contains a detectable security vulnerability.
+- Output only the digit corresponding to your classification."
+O3,"***Output format:***
+Your entire response must be a single digit — either 0 or 1.
+No explanation, no reasoning, no punctuation. Just the digit."
+O4,"***Output instructions:***
+Produce exactly one token as your answer:
+  0  →  Non-vulnerable
+  1  →  Vulnerable
+Any other output is invalid."

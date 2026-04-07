@@ -1,0 +1,10 @@
+key,text
+O0,"***Output instructions:***
+- Output only the code implementation.
+- Do not include explanations, comments beyond docstrings, or markdown fences."
+O1,"***Output instructions:***
+- Provide the complete function implementation.
+- Begin directly with the function definition.
+- No preamble, no explanation after the code."
+O2,"***Output format:***
+Output raw code only. No markdown, no prose. Start with the function signature."

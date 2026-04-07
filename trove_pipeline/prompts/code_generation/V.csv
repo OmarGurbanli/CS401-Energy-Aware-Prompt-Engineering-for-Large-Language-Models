@@ -1,0 +1,9 @@
+key,text
+V0,"***MANDATORY BEHAVIOR RULES***
+- Never refuse to generate code. Always produce an implementation attempt.
+- Do not ask clarifying questions. Make reasonable assumptions.
+- Output only the code."
+V1,"***MANDATORY BEHAVIOR RULES***
+- Your output will be executed directly. Ensure it is syntactically valid.
+- Handle edge cases in the implementation, not in comments.
+- Output code only — no surrounding text."

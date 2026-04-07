@@ -1,0 +1,3 @@
+key,text
+V0,"MANDATORY: Output only a single digit (0 or 1). Do not explain your reasoning."
+V1,"You are in an automated pipeline. Output exactly one character — 0 or 1 — nothing else."

@@ -1,0 +1,6 @@
+key,text
+R0,"***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit."

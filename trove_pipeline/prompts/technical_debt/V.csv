@@ -1,0 +1,3 @@
+key,text
+V0,"MANDATORY: You are in an automated pipeline. Output only one label from: none, god_class, long_method, data_class, feature_envy. Any other output causes a parse error."
+V1,"MANDATORY: Do not explain your reasoning. Do not add punctuation or extra words. Output exactly one label."

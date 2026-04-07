@@ -1,0 +1,21 @@
+key,text
+V0,"***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- NEVER ask the human operator any question or request feedback. You must act as an automated agent.
+- DO NOT include any explanations, reasoning, or extra text in your output.
+- ALWAYS output only a single digit (0 or 1) as your answer."
+V1,"***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- You are operating in a fully automated pipeline. Do not produce any conversational text.
+- Your output will be parsed programmatically; any non-digit character will cause a parse error.
+- Always respond with exactly one character: 0 or 1."
+V2,"***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Do not hedge or express uncertainty; commit to a classification.
+- Do not output CWE identifiers, severity ratings, or explanations.
+- Output must be strictly one digit: 0 or 1."
+V3,"***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- This is a binary classification task. There are exactly two valid outputs: 0 and 1.
+- If you are uncertain, choose the label that best fits based on available evidence.
+- Never produce multi-token or multi-line output."
+V4,"***MANDATORY BEHAVIOR RULES (DO NOT OMIT)***
+- Treat every code snippet as independent; do not carry context across classifications.
+- Never refuse to classify; always produce 0 or 1.
+- Do not explain your reasoning — output only the digit."
