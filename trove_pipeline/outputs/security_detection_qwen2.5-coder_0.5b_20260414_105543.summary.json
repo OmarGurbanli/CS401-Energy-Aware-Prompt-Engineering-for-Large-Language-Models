@@ -1,0 +1,14 @@
+{
+  "accuracy": 0.0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1_score": 0.0,
+  "fpr": 0.0,
+  "fnr": 0.0,
+  "true_positives": 0,
+  "false_positives": 0,
+  "true_negatives": 0,
+  "false_negatives": 0,
+  "total_predictions": 1000,
+  "emissions_kgCO2": 2.1452885388911606e-06
+}
