@@ -81,10 +81,18 @@ class PipelineConfig:
 
     @classmethod
     def from_yaml(cls, path: str) -> "PipelineConfig":
-        with open(path, "r") as f:
+        config_dir = Path(path).resolve().parent
+        with open(path, "r", encoding="utf-8") as f:
             data = yaml.safe_load(f)
         known = cls._field_names()
-        return cls(**{k: v for k, v in data.items() if k in known})
+        obj = cls(**{k: v for k, v in data.items() if k in known})
+        # Resolve relative paths against the config file's directory
+        # so the pipeline works regardless of where you run it from
+        for attr in ("dataset_path", "prompts_dir", "output_dir", "carbon_output_dir"):
+            val = getattr(obj, attr, "")
+            if val and not Path(val).is_absolute():
+                setattr(obj, attr, str(config_dir / val))
+        return obj
 
     @classmethod
     def from_dict(cls, d: dict) -> "PipelineConfig":
@@ -523,16 +531,12 @@ class PipelineRunner:
         print(f"\n[Pipeline] Starting: {len(dataset)} samples × {len(combos)} combos = {total_calls} calls")
         print(f"[Model] {self.config.model_name}\n")
 
-        tracker = None
+        # Check if CodeCarbon is available once upfront
+        EmissionsTracker = None
         if self.config.track_emissions:
             try:
-                from codecarbon import EmissionsTracker
-                tracker = EmissionsTracker(
-                    project_name=f"trove_{self.config.task_name}",
-                    output_dir=self.config.carbon_output_dir,
-                    log_level="error",
-                )
-                tracker.start()
+                from codecarbon import EmissionsTracker as _ET
+                EmissionsTracker = _ET
             except Exception as e:
                 print(f"[Warning] CodeCarbon unavailable: {e}. Skipping emissions tracking.")
 
@@ -540,10 +544,29 @@ class PipelineRunner:
         errors = 0
 
         with tqdm(total=total_calls, desc="Inference", unit="call") as pbar:
-            for sample in dataset:
-                sample_input = self.task.get_input_for_sample(sample)
+            # FIX: iterate combos outer, samples inner so we can track
+            # emissions and compute aggregates per combo independently
+            for combo in combos:
+                combo_label = _combo_label(combo)
+                combo_rows = []
 
-                for combo in combos:
+                # Start a fresh tracker for this combo
+                tracker = None
+                if EmissionsTracker is not None:
+                    try:
+                        tracker = EmissionsTracker(
+                            project_name=f"trove_{self.config.task_name}",
+                            output_dir=self.config.carbon_output_dir,
+                            log_level="error",
+                            measure_power_secs=1,
+                        )
+                        tracker.start()
+                    except Exception as e:
+                        print(f"[Warning] Could not start tracker for combo {combo_label}: {e}")
+                        tracker = None
+
+                for sample in dataset:
+                    sample_input = self.task.get_input_for_sample(sample)
                     prompt = self.builder.build(sample_input, combo)
 
                     try:
@@ -553,44 +576,55 @@ class PipelineRunner:
                     except Exception as e:
                         raw_text = f"ERROR: {e}"
                         prediction = None
+                        latency = 0.0
                         metrics = {"correct": 0, "error": str(e)}
                         errors += 1
 
                     row = {
                         "model": self.config.model_name,
                         "task": self.config.task_name,
-                        "prompt_combo": _combo_label(combo),
+                        "prompt_combo": combo_label,
                         "prompt_text": prompt[:500] + "..." if len(prompt) > 500 else prompt,
                         "raw_response": raw_text,
                         "prediction": str(prediction),
-                        "latency_sec": round(latency if "latency" in dir() else 0, 4),
+                        "latency_sec": round(latency, 4),
                         **metrics,
                     }
-                    # Add sample ground-truth fields (exclude raw input to keep CSV lean)
+                    # Add ground-truth metadata only (skip raw input fields)
                     for k, v in sample.items():
-                        if k not in ("code", "text", "input", "content"):
+                        if k not in ("code", "text", "input", "content", "prompt", "reference"):
                             row[f"gt_{k}"] = v
 
-                    rows.append(row)
+                    combo_rows.append(row)
                     pbar.update(1)
 
-        emissions = None
-        if tracker:
-            try:
-                emissions = tracker.stop()
-            except Exception:
-                pass
+                # Stop tracker and record per-combo emissions
+                combo_emissions = None
+                if tracker:
+                    try:
+                        combo_emissions = tracker.stop()
+                    except Exception:
+                        pass
 
+                # Compute aggregates for this combo only and stamp onto its rows
+                combo_summary = self.task.aggregate_results(combo_rows)
+                if combo_emissions is not None:
+                    combo_summary["emissions_kgCO2"] = combo_emissions
+
+                for row in combo_rows:
+                    for k, v in combo_summary.items():
+                        row[f"summary_{k}"] = v
+
+
+                rows.extend(combo_rows)
+
+        # Overall summary across all combos (for the JSON file)
         summary = self.task.aggregate_results(rows)
-        if emissions is not None:
-            summary["emissions_kgCO2"] = emissions
-
-        output_path = self._save_results(rows, summary, emissions)
+        output_path = self._save_results(rows, summary, None)
 
         return {
             "rows": rows,
             "summary": summary,
-            "emissions": emissions,
             "output_path": output_path,
             "errors": errors,
         }
@@ -601,7 +635,7 @@ class PipelineRunner:
         self,
         rows: list[dict],
         summary: dict[str, Any],
-        emissions: Optional[float],
+        emissions: Optional[float],  # kept for signature compat, now unused
     ) -> str:
         output_file = self.config.output_file or (
             f"{self.config.task_name}_{self.config.model_name.replace(':', '_')}_{_ts()}.csv"
@@ -609,8 +643,7 @@ class PipelineRunner:
         output_path = Path(self.config.output_dir) / output_file
 
         df = pd.DataFrame(rows)
-        for k, v in summary.items():
-            df[f"summary_{k}"] = v
+        # summary_* columns are already stamped per-combo in run(); don't overwrite
         df.to_csv(output_path, index=False)
 
         # Also save summary JSON
