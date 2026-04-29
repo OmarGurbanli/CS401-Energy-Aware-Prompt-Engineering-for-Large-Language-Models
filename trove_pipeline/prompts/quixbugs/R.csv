@@ -4,3 +4,40 @@ R0,"***Internal steps (DO NOT output)***
 2. Trace through the logic — check loop conditions, operators, off-by-one errors.
 3. Determine if the function would produce correct output for typical inputs.
 4. Output only the digit."
+R1,"***Internal steps (DO NOT output)***
+1. Identify the purpose of the function.
+2. Check for common bug patterns: wrong operators, boundary errors, missing base cases.
+3. Output only the digit."
+R2,"***Internal steps (DO NOT output)***
+1. Read the code line by line.
+2. Simulate execution mentally with a simple input.
+3. Check if the output matches expected behavior.
+4. Output only the digit."
+R3,"***Internal steps (DO NOT output)***
+1. Understand what the function is supposed to do.
+2. Look for logical errors, typos, or incorrect conditions.
+3. Output only the digit."
+R4,"***Internal steps (DO NOT output)***
+1. Analyze the control flow of the function.
+2. Check loop termination, recursion base cases, and variable updates.
+3. Output only the digit."
+R5,"***Internal steps (DO NOT output)***
+1. Identify the data structures and algorithms used.
+2. Verify correctness of indexing, slicing, and comparisons.
+3. Output only the digit."
+R6,"***Internal steps (DO NOT output)***
+1. Check for off-by-one errors in loops and conditionals.
+2. Verify return values and edge case handling.
+3. Output only the digit."
+R7,"***Internal steps (DO NOT output)***
+1. Trace through the function with a typical input.
+2. Identify any step where the result diverges from expected.
+3. Output only the digit."
+R8,"***Internal steps (DO NOT output)***
+1. Review variable naming and usage for correctness.
+2. Check that all branches of conditionals are handled properly.
+3. Output only the digit."
+R9,"***Internal steps (DO NOT output)***
+1. Look for mutation bugs where variables are modified incorrectly.
+2. Check that the function handles empty or boundary inputs.
+3. Output only the digit."

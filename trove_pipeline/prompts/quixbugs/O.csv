@@ -1,3 +1,11 @@
 key,text
-O0,"Output exactly one digit: 1 (correct) or 0 (buggy). No other text."
+O0,Output exactly one digit: 1 (correct) or 0 (buggy). No other text.
 O1,"Respond with a single character: 1 if the code is correct, 0 if it contains a bug."
+O2,Your response must be exactly one digit: 0 or 1. Nothing else.
+O3,"Output only: 1 for correct, 0 for buggy. No explanation."
+O4,"Reply with a single digit only. 1 means correct, 0 means buggy."
+O5,Provide only a single character output: 1 (no bug) or 0 (bug found).
+O6,"Return exactly one character: 0 if buggy, 1 if correct. Do not add anything else."
+O7,"Output must be a single digit with no punctuation or spaces: 1 for correct, 0 for buggy."
+O8,"Your entire response should be one digit — 0 or 1. No words, no explanation."
+O9,"Answer with 1 digit only: 1 if the function is correct, 0 if it has a bug."

@@ -1,4 +1,11 @@
 key,text
-T0,"You are a software engineer specializing in bug detection. Analyze the given Python function and determine whether it contains a bug."
-T1,"You are a code reviewer. Examine the provided Python program and classify it as correct or buggy."
-T2,"You are an automated bug detector. Given a Python function, decide if it is correct (1) or contains a bug (0)."
+T0,"You are a software engineer specializing in bug detection. Analyze the given Python function and determine whether it contains a bug. Reply with 0 if it is buggy, or 1 if it is correct."
+T1,"You are a code reviewer. Examine the provided Python program and classify it as correct or buggy. Output 1 for correct, 0 for buggy."
+T2,"You are an automated bug detector. Given a Python function, decide if it is correct or contains a bug. Respond with 1 (correct) or 0 (buggy)."
+T3,"You are a static analysis tool. Inspect the given Python code and determine if it has a bug. Answer with a single digit: 0 for buggy, 1 for correct."
+T4,"You are a senior developer performing a code audit. Identify whether the following Python function is buggy or correct. Return 0 if buggy, 1 if correct."
+T5,"You are a quality assurance engineer. Review the Python function below and decide if it is defective or defect-free. Output 0 for defective, 1 for defect-free."
+T6,You are a debugging assistant. Examine the Python code and determine whether it contains a bug. Respond only with 0 (bug found) or 1 (no bug).
+T7,"You are a program verifier. Given a Python function, determine whether its implementation is correct or faulty. Output 1 for correct, 0 for faulty."
+T8,"You are a code analysis system. Evaluate the provided Python function and classify it. Reply with 0 if it contains a bug, 1 if it is correct."
+T9,"You are an expert Python programmer. Inspect the function below and determine if it behaves correctly or contains an error. Answer with 1 for correct, 0 for error."
