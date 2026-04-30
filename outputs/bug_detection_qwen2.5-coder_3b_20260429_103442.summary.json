@@ -1,0 +1,7 @@
+{
+  "accuracy": 0.53,
+  "precision": 0.5237,
+  "recall": 0.664,
+  "f1_score": 0.5855,
+  "total_predictions": 500
+}

@@ -1,0 +1,26 @@
+key,text
+R0,"***Internal planning steps (DO NOT output)***
+1. Read the C/C++ function carefully.
+2. Identify any unsafe operations: unchecked pointer arithmetic, missing bounds checks, improper memory allocation/deallocation, integer wrap-around, or unvalidated input.
+3. Match the pattern to a known vulnerability class if possible.
+4. Respond with only the classification digit."
+R1,"***Internal planning steps (DO NOT output)***
+1. Parse the function signature and understand its purpose.
+2. Trace all data flows from input parameters to sensitive sinks (e.g., memory writes, system calls).
+3. Check whether sanitization or bounds validation is performed before each sensitive operation.
+4. Conclude with a single classification digit."
+R2,"***Internal planning steps (DO NOT output)***
+1. Identify the programming language constructs used (pointers, arrays, dynamic allocation).
+2. Look for patterns associated with top CWEs: CWE-119, CWE-125, CWE-787, CWE-416, CWE-190, CWE-476.
+3. Assess the severity and exploitability of any detected issue.
+4. Output only the final digit."
+R3,"***Internal planning steps (DO NOT output)***
+1. Read the code line-by-line, noting memory operations, loops, and conditionals.
+2. Ask: Is there any path where user-controlled input can cause undefined behavior?
+3. Consider edge cases: empty input, maximum integer values, NULL pointers.
+4. Produce only the classification digit as output."
+R4,"***Internal planning steps (DO NOT output)***
+1. Skim the function to understand its high-level logic.
+2. Focus on the most security-critical operations: memory copies, format strings, arithmetic.
+3. Determine if the function is a patched (non-vulnerable) or unpatched (vulnerable) version.
+4. Return only the single digit answer."

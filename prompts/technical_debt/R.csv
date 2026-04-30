@@ -1,0 +1,16 @@
+key,text
+R0,"***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature Envy: does this method use another class's data more than its own?
+7. If none apply, label as none.
+8. Output only the label."
+R1,"***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only the final label — no explanation."

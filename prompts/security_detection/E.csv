@@ -1,0 +1,61 @@
+key,input,output,label
+E0_shot1,"/* CWE-125: Out-of-bounds Read */
+int read_data(const char *buf, int len) {
+    int i, total = 0;
+    for (i = 0; i <= len; i++) {   /* off-by-one: should be i < len */
+        total += buf[i];
+    }
+    return total;
+}",1,1
+E0_shot2,"/* Patched: CWE-190 Integer Overflow — size check added */
+void *safe_alloc(size_t nmemb, size_t size) {
+    if (size && nmemb > SIZE_MAX / size)
+        return NULL;
+    return malloc(nmemb * size);
+}",0,0
+E1_shot1,"/* CWE-476: NULL Pointer Dereference */
+void process(struct node *n) {
+    printf(""%d\n"", n->next->value);  /* n->next may be NULL */
+}",1,1
+E1_shot2,"/* CWE-416: Use-After-Free */
+void handle_request(struct conn *c) {
+    free(c->buf);
+    log_request(c->buf);   /* buf accessed after free */
+}",1,1
+E2_shot1,"/* CWE-787: Out-of-bounds Write */
+void copy_name(char *dst, const char *src) {
+    int i = 0;
+    while (src[i] != '\0') {
+        dst[i] = src[i];   /* no bounds check on dst */
+        i++;
+    }
+    dst[i] = '\0';
+}",1,1
+E2_shot2,"/* Safe: bounded string copy */
+void safe_copy_name(char *dst, const char *src, size_t dst_size) {
+    strncpy(dst, src, dst_size - 1);
+    dst[dst_size - 1] = '\0';
+}",0,0
+E3_shot1,"/* CWE-190: Integer Overflow → heap overflow */
+char *create_buffer(int n) {
+    char *buf = (char *)malloc(n + 1);  /* n+1 overflows if n == INT_MAX */
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}",1,1
+E3_shot2,"/* Safe: checked allocation with size_t */
+char *create_buffer_safe(size_t n) {
+    if (n == SIZE_MAX) return NULL;
+    char *buf = (char *)malloc(n + 1);
+    if (!buf) return NULL;
+    memset(buf, 0, n + 1);
+    return buf;
+}",0,0
+E4_shot1,"/* CWE-134: Uncontrolled Format String */
+void log_msg(const char *user_input) {
+    printf(user_input);   /* user_input used directly as format string */
+}",1,1
+E4_shot2,"/* Safe: literal format string */
+void log_msg_safe(const char *user_input) {
+    printf(""%s"", user_input);
+}",0,0

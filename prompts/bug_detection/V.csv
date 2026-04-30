@@ -1,0 +1,11 @@
+key,text
+V0,MANDATORY: Output only a single digit (0 or 1). Do not explain your reasoning.
+V1,You are in an automated pipeline. Output exactly one character — 0 or 1 — nothing else.
+V2,IMPORTANT: Your response must contain only the digit 0 or 1. Any other output will cause an error.
+V3,STRICT MODE: Output one digit only. Extra text will break the system.
+V4,WARNING: Only output 0 or 1. Any additional characters will be treated as an error.
+V5,This is a machine-readable task. Output exactly one digit: 0 or 1.
+V6,"REQUIRED FORMAT: Single digit response only. 0 = bug, 1 = correct."
+V7,You must respond with exactly one character. Outputting anything other than 0 or 1 is invalid.
+V8,"FORMAT CONSTRAINT: One digit only (0 or 1). No spaces, no punctuation, no explanation."
+V9,Automated evaluation in progress. Output: 0 (buggy) or 1 (correct). Nothing else.

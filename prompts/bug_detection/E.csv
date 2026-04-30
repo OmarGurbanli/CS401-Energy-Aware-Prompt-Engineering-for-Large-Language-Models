@@ -1,0 +1,43 @@
+key,input,output
+E0_shot1,"def binary_search(arr, x):
+    left, right = 0, len(arr)
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1",0
+E0_shot2,"def binary_search(arr, x):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1",1
+E1_shot1,"def gcd(a, b):
+    while b != 0:
+        a = b
+        b = a % b
+    return a",0
+E1_shot2,"def gcd(a, b):
+    while b != 0:
+        temp = b
+        b = a % b
+        a = temp
+    return a",1
+E2_shot1,"def is_even(n):
+    if n % 2 = 0:
+        return True
+    else:
+        return False",0
+E2_shot2,"def fib(n):
+    if n <= 1:
+        return n
+    return fib(n-1) + fib(n-2)",1

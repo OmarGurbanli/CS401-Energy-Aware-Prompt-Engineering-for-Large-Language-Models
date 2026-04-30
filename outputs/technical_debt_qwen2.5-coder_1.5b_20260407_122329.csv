@@ -1,0 +1,1301 @@
+model,task,prompt_combo,prompt_text,raw_response,prediction,latency_sec,true_label,correct,gt_label,summary_accuracy,summary_f1_macro,summary_f1_god_class,summary_f1_long_method,summary_f1_data_class,summary_f1_feature_envy,summary_f1_none,summary_total_predictions,summary_correct,summary_emissions_kgCO2
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,3.1034,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1123,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1503,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.174,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1206,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.1561,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",none,none,0.1446,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",none,none,0.0964,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",none,none,0.1294,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1516,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1149,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.1443,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.2255,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1161,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.2163,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1522,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1105,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.1426,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1425,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",none,none,0.0976,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",none,none,0.1273,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.3436,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1194,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.3411,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.156,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1141,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.1499,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.157,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1162,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.1447,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1426,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1071,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1352,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.149,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1066,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1426,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1568,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1064,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1733,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.2238,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1169,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.2131,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",none,none,0.1371,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",none,none,0.0972,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",none,none,0.1285,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1641,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1042,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.1559,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1423,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1045,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1363,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1438,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1046,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1388,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1613,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1049,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1581,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1835,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1059,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.1806,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1443,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1061,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1384,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1572,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1151,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.1504,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1457,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.106,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.143,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1437,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1052,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",none,none,0.1334,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1515,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1143,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.146,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1469,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1053,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.1428,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.2737,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1197,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.272,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.9073,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1449,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.9052,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1471,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1061,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1465,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1413,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1067,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1378,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.2299,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1079,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.2186,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1555,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1062,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1479,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1482,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1052,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1428,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1467,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.106,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1384,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1656,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1066,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.1559,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.6663,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1377,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.6592,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",none,none,0.1301,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",none,none,0.098,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",none,none,0.1278,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1503,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1076,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1433,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1491,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1068,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1453,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1436,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1059,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.1417,feature_envy,0,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.15,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1086,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.145,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1561,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1033,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1484,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1784,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.114,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.1715,feature_envy,1,feature_envy,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.2184,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1164,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.2234,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1477,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1052,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1441,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.2314,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1162,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.2011,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",god_class,god_class,0.3889,god_class,1,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",god_class,god_class,0.1164,god_class,1,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",feature_envy,feature_envy,0.3947,god_class,0,god_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.2387,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",feature_envy,feature_envy,0.1174,long_method,0,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.2272,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.211,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",long_method,long_method,0.1095,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",long_method,long_method,0.207,long_method,1,long_method,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1572,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R0|T=T0|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Read the code carefully and understand its structure.
+2. Ask: Is this a class or a method?
+3. Check for God Class: does this class have too many responsibilities?
+4. Check for Long Method: is this method excessively long or complex?
+5. Check for Data Class: does this class only hold data with no real behavior?
+6. Check for Feature...",data_class,data_class,0.1068,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475
+qwen2.5-coder:1.5b,technical_debt,O=O0|R=R1|T=T2|V=V0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text.
+
+***Internal reasoning steps (DO NOT output)***
+1. Identify if this is a class-level or method-level snippet.
+2. For classes: look for God Class (too many fields/methods) or Data Class (only getters/setters).
+3. For methods: look for Long Method (excessive length/complexity) or Feature Envy (heavy use of external class data).
+4. If no smell is present, output none.
+5. Output only t...",data_class,data_class,0.1523,data_class,1,data_class,0.4267,0.3879,0.0976,0.4444,0.7273,0.2824,0,150,64,0.001218475

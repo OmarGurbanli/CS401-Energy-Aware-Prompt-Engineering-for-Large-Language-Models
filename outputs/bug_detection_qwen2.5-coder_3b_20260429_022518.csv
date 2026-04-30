@@ -1,0 +1,851 @@
+model,task,prompt_combo,prompt_text,raw_response,prediction,latency_sec,correct,error,gt_label,summary_accuracy,summary_precision,summary_recall,summary_f1_score,summary_total_predictions,summary_emissions_kgCO2
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',0,0.0,0.0,0.0,0.0,50,4.246341523792809e-06
+qwen2.5-coder:3b,bug_detection,E=def is|O=O1|R=R0|T=T2|V=V0,"***EXAMPLE INPUT, OUTPUT FROM PREVIOUS INTERACTIONS***
+
+Example 1:
+Input (Code):
+None
+Output:
+None
+
+Respond with a single character: 1 if the code is correct, 0 if it contains a bug.
+
+***Internal steps (DO NOT output)***
+1. Read the function carefully.
+2. Trace through the logic — check loop conditions, operators, off-by-one errors.
+3. Determine if the function would produce correct output for typical inputs.
+4. Output only the digit.
+
+You are an automated bug detector. Given a Python functi...",ERROR: No module named 'ollama',None,0.0,0,No module named 'ollama',1,0.0,0.0,0.0,0.0,50,4.246341523792809e-06

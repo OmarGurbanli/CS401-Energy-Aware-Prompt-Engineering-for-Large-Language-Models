@@ -1,0 +1,4 @@
+key,text
+O0,"Output exactly one of these labels: none | god_class | long_method | data_class | feature_envy. No other text."
+O1,"Respond with a single label only. Choose from: none, god_class, long_method, data_class, feature_envy. Do not explain your answer."
+O2,"Your entire response must be one of: none, god_class, long_method, data_class, feature_envy. Output nothing else."
